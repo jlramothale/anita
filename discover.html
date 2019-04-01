@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Discover - MovieSpace</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="row">
+                    <div class="col50">
+                        <ul class="topnav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="discover.html" class="active">Discover</a></li>
+                            <li><a href="feature.html">Feature</a></li>
+                            <li><a href="top-hated.html">Top Rated</a></li>
+                            <li><a href="latest.html">Latest</a></li>
+                            <li><a href="calender.html">Calendar</a></li>
+                        </ul>
+                    </div>
+                    <div class="col30">
+                        <div class="search">
+                            <form id="frmFilterByTitle">
+                                <input type="search" name="search" id="search" placeholder="Search by movie title">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>  
+                    </div>
+                    <div class="col20">
+                        <div class="login">
+                            <a><span class="fa far fa-user-circle"></span> Login</a>
+                            <a><span class="fa far fa-user-circle"></span> Register</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="main">
+                <div class="row">
+                    <div class="col20">
+                        <button class="filter_button" type="button" onClick="togleFilter()"><i class="fa fas fa-filter"></i> FILTER</button>
+                    </div>
+                </div>
+                
+                <div id="hiden_filter">
+                    <div class="row">
+                            <br/>
+                        <div class="col20">
+                            <button class="button_filter">filter by <i class="fa fas fa-fire"></i> Top IMDb</button>
+                        </div>
+                        <div class="col60">
+                            <form id="frmFilter" method="post" multiple>
+                                <h5>Genre</h5>
+                                <div class="radio-group">
+                                    <label><input type="checkbox" value="Action" name="Genre">Action</label>
+                                    <label><input type="checkbox" value="Romance" name="Genre">Romance</label>
+                                    <label><input type="checkbox" value="Horror" name="Genre">Horror</label>
+                                    <label><input type="checkbox" value="Drama" name="Genre">Drama</label>
+                                    <label><input type="checkbox" value="Sci-Fi" name="Genre">Sci-Fi</label>
+                                    <label><input type="checkbox" value="Comedy" name="Genre">Comedy</label>
+                                    <label><input type="checkbox" value="Thriller" name="Genre">Thriller</label>
+                                    <label><input type="checkbox" value="KungFu" name="Genre">KungFu</label>
+                                </div>
+                                <h5>Year</h5>
+                                <div class="radio-group">
+                                    <input type="radio" value="2019" name="year">2019
+                                    <input type="radio" value="2018" name="year">2018
+                                    <input type="radio" value="2017" name="year">2017
+                                    <input type="radio" value="2016" name="year">2016
+                                    <input type="radio" value="2015" name="year">2015
+                                    <input type="radio" value="2014" name="year">2014
+                                    <input type="radio" value="Older" name="year">Older
+                                </div>
+                                <div class="row">
+                                    <div class="col20">
+                                        <button class="button_filter" style="margin-left: -10px;">Movie Filter</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="row">
+                    <div class="col30">
+                        <div class="heading">
+                            <h3><i class="fa fa-television"></i> Watch Your Favourite</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="second_pictures"></div>
+            </section>
+
+            <footer class="footer">
+
+            </footer>
+
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="js/apidb.js" type="text/javascript"></script>
+        <script src="js/discovery.js" type="text/javascript"></script>
+    </body>
+</html>
