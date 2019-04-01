@@ -100,7 +100,20 @@ var apidb = {
     },
 
     filterMovies: function(params){
-        alert(params);
+        var rUrl = apidb.apiUrl + "discover/movie?"  + apidb.apiKey + "&sort_by=popularity.desc&with_genres=" + params[0] + "&primary_release_year=" + params[1];
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var jObject = JSON.parse(this.responseText);
+                var results = jObject["results"];
+                for(i = 0; i < results.length; i++){
+                    $("#second_pictures").append(apidb.mainListView(results[i]));  
+                }
+            }
+        };
+        xhttp.open("GET", rUrl, false);
+        xhttp.send();
+        return false;
     },
 
     bannerView: function(movie){

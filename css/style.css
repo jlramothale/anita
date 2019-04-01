@@ -280,6 +280,10 @@ img {
     background-color:white;
     margin-top: -500px;
 }
+
+.extend{
+    margin-bottom: 30px;
+}
 .extend:hover .pop_up {
     /* visibility: visible; */
     display: block;

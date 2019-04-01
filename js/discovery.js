@@ -1,10 +1,9 @@
 $(document).ready(function(){
-    
+
     apidb.getMainListMovies("discover");
 
     $("#frmFilter").submit(function(){
-        var params = $(this).serialize().split("&");
-        apidb.filterMovies(params);
+        window.location.href = "discover-results.html?" + $(this).serialize();
         return false;
     });
 
